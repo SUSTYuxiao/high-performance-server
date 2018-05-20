@@ -150,59 +150,86 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/main.c.s
 .PHONY : main.c.s
 
-thread_pool.o: thread_pool.c.o
+px_epoll.o: px_epoll.c.o
 
-.PHONY : thread_pool.o
-
-# target to build an object file
-thread_pool.c.o:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/thread_pool.c.o
-.PHONY : thread_pool.c.o
-
-thread_pool.i: thread_pool.c.i
-
-.PHONY : thread_pool.i
-
-# target to preprocess a source file
-thread_pool.c.i:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/thread_pool.c.i
-.PHONY : thread_pool.c.i
-
-thread_pool.s: thread_pool.c.s
-
-.PHONY : thread_pool.s
-
-# target to generate assembly for a file
-thread_pool.c.s:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/thread_pool.c.s
-.PHONY : thread_pool.c.s
-
-tool.o: tool.c.o
-
-.PHONY : tool.o
+.PHONY : px_epoll.o
 
 # target to build an object file
-tool.c.o:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/tool.c.o
-.PHONY : tool.c.o
+px_epoll.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_epoll.c.o
+.PHONY : px_epoll.c.o
 
-tool.i: tool.c.i
+px_epoll.i: px_epoll.c.i
 
-.PHONY : tool.i
+.PHONY : px_epoll.i
 
 # target to preprocess a source file
-tool.c.i:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/tool.c.i
-.PHONY : tool.c.i
+px_epoll.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_epoll.c.i
+.PHONY : px_epoll.c.i
 
-tool.s: tool.c.s
+px_epoll.s: px_epoll.c.s
 
-.PHONY : tool.s
+.PHONY : px_epoll.s
 
 # target to generate assembly for a file
-tool.c.s:
-	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/tool.c.s
-.PHONY : tool.c.s
+px_epoll.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_epoll.c.s
+.PHONY : px_epoll.c.s
+
+px_thread_pool.o: px_thread_pool.c.o
+
+.PHONY : px_thread_pool.o
+
+# target to build an object file
+px_thread_pool.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_thread_pool.c.o
+.PHONY : px_thread_pool.c.o
+
+px_thread_pool.i: px_thread_pool.c.i
+
+.PHONY : px_thread_pool.i
+
+# target to preprocess a source file
+px_thread_pool.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_thread_pool.c.i
+.PHONY : px_thread_pool.c.i
+
+px_thread_pool.s: px_thread_pool.c.s
+
+.PHONY : px_thread_pool.s
+
+# target to generate assembly for a file
+px_thread_pool.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_thread_pool.c.s
+.PHONY : px_thread_pool.c.s
+
+px_tool.o: px_tool.c.o
+
+.PHONY : px_tool.o
+
+# target to build an object file
+px_tool.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_tool.c.o
+.PHONY : px_tool.c.o
+
+px_tool.i: px_tool.c.i
+
+.PHONY : px_tool.i
+
+# target to preprocess a source file
+px_tool.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_tool.c.i
+.PHONY : px_tool.c.i
+
+px_tool.s: px_tool.c.s
+
+.PHONY : px_tool.s
+
+# target to generate assembly for a file
+px_tool.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_tool.c.s
+.PHONY : px_tool.c.s
 
 # Help Target
 help:
@@ -216,12 +243,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... thread_pool.o"
-	@echo "... thread_pool.i"
-	@echo "... thread_pool.s"
-	@echo "... tool.o"
-	@echo "... tool.i"
-	@echo "... tool.s"
+	@echo "... px_epoll.o"
+	@echo "... px_epoll.i"
+	@echo "... px_epoll.s"
+	@echo "... px_thread_pool.o"
+	@echo "... px_thread_pool.i"
+	@echo "... px_thread_pool.s"
+	@echo "... px_tool.o"
+	@echo "... px_tool.i"
+	@echo "... px_tool.s"
 .PHONY : help
 
 

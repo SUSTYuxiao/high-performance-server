@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/high_performance_server.dir/main.c.o"
-  "CMakeFiles/high_performance_server.dir/tool.c.o"
-  "CMakeFiles/high_performance_server.dir/thread_pool.c.o"
+  "CMakeFiles/high_performance_server.dir/px_tool.c.o"
+  "CMakeFiles/high_performance_server.dir/px_thread_pool.c.o"
+  "CMakeFiles/high_performance_server.dir/px_epoll.c.o"
   "high_performance_server.pdb"
   "high_performance_server"
 )
