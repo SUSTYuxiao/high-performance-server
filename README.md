@@ -1,5 +1,5 @@
-## px-High-Performance-HTTP-Server
-最后一次编辑于 2018-05-20
+## PX-High-Performance-HTTP-Server
+Last edit: 2018-05-20
 ### 项目目的
 
 HTTP服务器是互联网不可缺少的角色
@@ -28,5 +28,3 @@ TODO
 - UDP版本
 - 配套UDP服务器的IOS防录屏视频播放器（swift）
 - 服务器缓存（性能优化）
-
-<center>@ 张鹏霄  zpx736312737@126.com</center>
