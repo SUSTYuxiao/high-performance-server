@@ -1,0 +1,3 @@
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir

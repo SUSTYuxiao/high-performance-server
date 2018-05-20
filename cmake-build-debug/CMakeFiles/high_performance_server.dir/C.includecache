@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/main.c
+stdio.h
+-
+
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/tool.c
+tool.h
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/tool.h
+
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/tool.h
+

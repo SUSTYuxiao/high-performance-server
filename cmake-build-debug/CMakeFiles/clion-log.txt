@@ -1,0 +1,4 @@
+"/Users/zpx/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/CLion.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug
