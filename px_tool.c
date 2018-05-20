@@ -5,8 +5,21 @@
 #include <printf.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <zconf.h>
+#include <stdlib.h>
+
 #include "px_tool.h"
 
+int get_CPU_core_num()
+{
+    return (int)sysconf(_SC_NPROCESSORS_ONLN);
+}
+
+void printError_exit(char *c)
+{
+    perror(c);
+    exit(-1);
+}
 
 int init_socket(int portNum)
 {
@@ -20,10 +33,7 @@ int init_socket(int portNum)
     //创建socket并返回描述符
     int listen_fd = socket(AF_INET, SOCK_STREAM, 0);
     if(listen_fd == -1)
-    {
-        perror("socket");
-        return  -1;
-    }
+        printError_exit("socket");
 
     // 使用SO_REUSEADDR使得端口在TIME_WAIT时就可以被重用（上一次连接还未完全结束）
     int sockOptval = 1;
@@ -45,7 +55,7 @@ int init_socket(int portNum)
     }
 
     //开始监听
-    if (listen(listen_fd, MAX_QUEUE) == -1);
+    if (listen(listen_fd, MAX_QUEUE) == -1)
     {
         perror("listen");
         return -1;
