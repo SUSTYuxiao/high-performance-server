@@ -22,11 +22,10 @@ typedef struct threadpool{
     int threadLeast;         // 空闲线程
     int threadMax;             // 最大线程数
     int quit;                // 等待销毁
-    int started;
 }threadpool;
 
 threadpool *threadpool_init(int threadNum);
 int threadpool_add(threadpool *pool, void (*func)(void *), void* arg);
-int threadpool_destroy(threadpool *pool, int gracegul);
+int threadpool_destroy(threadpool *pool);
 
 #endif //HIGH_PERFORMANCE_SERVER_THREAD_POOL_H

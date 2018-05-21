@@ -8,6 +8,8 @@
 #include "px_tool.h"
 #include "px_thread_pool.h"
 
+//TODO 平滑关闭线程池
+
 void* worker(void* p)
 {
     threadpool *pool = (threadpool*)p;
@@ -15,6 +17,7 @@ void* worker(void* p)
     while (1)
     {
         pthread_mutex_lock(&pool->cond);
+
         if(pool->quit == 1)
             break;
         pool->threadLeast++; //准备工作，可用线程数++
@@ -59,7 +62,6 @@ threadpool* threadpool_init(int threadNum)
     pool->head->arg = NULL;
     pool->head->next = NULL;
 
-
     //创建线程
     for (int i = 0; i < pool->threadMax; ++i)
         pthread_create(&(pool->threads[i]), NULL, worker, (void *) pool);
@@ -95,13 +97,48 @@ int threadpool_add(threadpool *pool, void (*func)(void *), void* arg)
     pthread_cond_signal(&pool->cond);
 
     error:
-    if(pthread_mutex_unlock(&pool->mutex) != 0)
+    if(pthread_mutex_lock(&pool->mutex) != 0)
         return -1;
 
     return 0;
 }
 
-int threadpool_destroy(threadpool *pool, int gracegul)
+int threadpool_destroy(threadpool *pool)
 {
+    if (pool == NULL)
+        return 0;
 
+    if (pool->quit)
+        return 0;
+    pool->quit =1;
+
+
+    pthread_mutex_unlock(&pool->mutex);
+
+    pthread_cond_broadcast(&pool->cond);
+
+    pthread_mutex_unlock(&pool->mutex);
+
+    for(int i = 0; i < pool->threadMax; i++)
+    {
+        if(pthread_join(pool->threads[i], NULL) != 0)
+            printError_exit("join error");
+    }
+
+    pthread_mutex_destroy(&(pool->mutex));
+    pthread_cond_destroy(&(pool->cond));
+
+    free(pool->threads);
+
+    taskNode *cur = NULL;
+
+    while (pool->head->next)
+    {
+        cur = pool->head->next;
+        pool->head->next = cur->next;
+        free(cur);
+    }
+    free(pool);
+
+    return 0;
 }
