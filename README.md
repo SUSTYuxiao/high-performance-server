@@ -15,7 +15,14 @@ HTTP服务器是互联网不可缺少的角色
     - LPDDR3 8G
 
 ### 项目特性
-TODO
+
+- 线程池
+    - TODO
+- 多路复用(epoll)
+    - TODO
+- 定时器
+    - TODO
+- TODO
 
 ### 项目压测
 TODO

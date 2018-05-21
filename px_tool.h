@@ -8,9 +8,10 @@
 
 
 #define MAX_QUEUE 1024 //listen的第二个参数，存储三次握手的已完成队列
+#define DEAULT_PORT 8888
 
 int get_CPU_core_num();
-
+void printError_exit(char *c);
 int init_socket(int portNum);
 
 #endif //HIGH_PERFORMANCE_SERVER_TOOL_H

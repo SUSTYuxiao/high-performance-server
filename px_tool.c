@@ -26,8 +26,8 @@ int init_socket(int portNum)
     //判断端口号合法性
     if( portNum < 1025 || portNum > 65535)
     {
-        printf("错误的端口号，已使用缺省参数8888\n");
-        portNum = 8888;
+        printf("错误的端口号，已使用缺省参数%d\n", DEAULT_PORT);
+        portNum = DEAULT_PORT;
     }
 
     //创建socket并返回描述符
@@ -38,10 +38,7 @@ int init_socket(int portNum)
     // 使用SO_REUSEADDR使得端口在TIME_WAIT时就可以被重用（上一次连接还未完全结束）
     int sockOptval = 1;
     if(setsockopt(listen_fd, SOL_SOCKET, SO_REUSEADDR, (const void*)&sockOptval, sizeof(int)) == -1)
-    {
-        perror("set socket opt");
-        return -1;
-    }
+        printError_exit("set socket opt");
 
     //绑定IP、端口与socket
     struct sockaddr_in server;
@@ -49,17 +46,11 @@ int init_socket(int portNum)
     server.sin_addr.s_addr = htonl(INADDR_ANY);
     server.sin_port = htons((unsigned short) portNum);
     if(bind(listen_fd, (struct sockaddr *)&server, sizeof(server)) == -1)
-    {
-        perror("bind");
-        return -1;
-    }
+        printError_exit("bind");
 
     //开始监听
     if (listen(listen_fd, MAX_QUEUE) == -1)
-    {
-        perror("listen");
-        return -1;
-    }
+        printError_exit("listen");
 
-    return listen_fd;
+return listen_fd;
 }
