@@ -25,6 +25,14 @@ px_epoll.h
 /Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_epoll.h
 
 /Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_thread_pool.c
+stdlib.h
+-
+memory.h
+-
+pthread.h
+-
+px_tool.h
+/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_tool.h
 px_thread_pool.h
 /Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_thread_pool.h
 
@@ -40,6 +48,10 @@ sys/socket.h
 netinet/in.h
 -
 zconf.h
+-
+stdlib.h
+-
+fcntl.h
 -
 px_tool.h
 /Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_tool.h

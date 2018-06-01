@@ -17,16 +17,12 @@ int main(int argc, char* argv[])
     threadpool *threadPoolID = threadpool_init((int)get_CPU_core_num());
 
     //初始化套接字并绑定
-//    int listen_fd = init_socket(atoi(argv[2]));
+    int listenFd = init_socket(atoi(argv[2]));
 
-    //设置套接字为非阻塞
-    //make_socket_not_block
-
-    //创建epoll
+    //epoll初始化
+    int epollFd = epoll_create(0);
 
     //初始化定时器
-
-
 
     //开始处理请求
 

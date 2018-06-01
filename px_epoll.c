@@ -4,7 +4,3 @@
 
 #include "px_epoll.h"
 
-int epoll_create(int n)
-{
-    return  0;
-}

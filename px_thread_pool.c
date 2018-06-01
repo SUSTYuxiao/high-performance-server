@@ -50,7 +50,7 @@ threadpool* threadpool_init(int threadNum)
 
     //线程池初始化
     memset(pool, 0x00, sizeof(threadpool));
-
+    pool->threads = (pthread_t *) malloc(sizeof(pthread_t) * threadNum);
     if (pthread_mutex_init( &(pool->mutex), NULL) ) //初始化互斥锁
         printError_exit("mutex init failed(pool)");
     if (pthread_cond_init( &(pool->cond), NULL) ) //初始化条件变量
@@ -58,13 +58,17 @@ threadpool* threadpool_init(int threadNum)
 
     //head指向对链表是带头链表
     pool->threadMax = threadNum;
+    pool->head = (taskNode *) malloc(sizeof(taskNode));
     pool->head->func = NULL;
     pool->head->arg = NULL;
     pool->head->next = NULL;
 
     //创建线程
     for (int i = 0; i < pool->threadMax; ++i)
-        pthread_create(&(pool->threads[i]), NULL, worker, (void *) pool);
+    {
+        if (pthread_create(&(pool->threads[i]), NULL, worker, (void *) pool))
+            printError_exit("pthread_create failed");
+    }
 
     return pool;
 }
@@ -138,6 +142,7 @@ int threadpool_destroy(threadpool *pool)
         pool->head->next = cur->next;
         free(cur);
     }
+    free(pool->head);
     free(pool);
 
     return 0;
