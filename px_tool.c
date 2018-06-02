@@ -10,6 +10,11 @@
 #include <fcntl.h>
 
 #include "px_tool.h"
+#include "px_request.h"
+#include "px_epoll.h"
+#include "px_timer.h"
+
+#define TIME_OUT_DEFAULT 500;
 
 int get_CPU_core_num()
 {
@@ -61,5 +66,22 @@ int px_init_socket(int portNum)
     if (fcntl(listenFd, F_SETFL, flag) == -1)
         printError_exit("set non-block 1");
 
-return listenFd;
+    return listenFd;
+}
+
+void px_accept(int listenFd, int epollFd, char *path)
+{
+    struct sockaddr_in clientAddr;
+    socklen_t len = 0;
+    int clientFd = accept(listenFd, (struct sockaddr*)&clientAddr, &len);
+    if(clientFd == -1)
+        perror("accept");
+
+    httpRequest* request = (httpRequest*)malloc(sizeof(httpRequest));
+    px_http_init(request, clientFd, epollFd, path);
+
+    //EPOLLONESHOT表示再次监听此事件前，需要先重新加入fd到epoll
+    px_epoll_add(epollFd, clientFd, request, (EPOLLIN | EPOLLET | EPOLLONESHOT));
+
+    px_time_add(request, TIME_OUT_DEFAULT, px_http_close);
 }

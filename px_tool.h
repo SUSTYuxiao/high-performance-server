@@ -13,5 +13,6 @@
 int get_CPU_core_num();
 void printError_exit(char *c);
 int px_init_socket(int portNum);
+void px_accept(int listenFd, int epollFd, char *path);
 
 #endif //HIGH_PERFORMANCE_SERVER_TOOL_H

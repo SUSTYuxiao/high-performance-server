@@ -16,7 +16,7 @@ void* worker(void* p)
 
     while (1)
     {
-        pthread_mutex_lock(&pool->cond);
+        pthread_mutex_lock(&pool->mutex);
 
         if(pool->quit == 1)
             break;

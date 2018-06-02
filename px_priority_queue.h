@@ -19,6 +19,7 @@ typedef struct priority_queue{
 int px_pq_is_empty(priority_queue *pq);
 void* px_pq_top(priority_queue *pq);
 int px_pq_del(priority_queue *pq);
-
+int px_pq_init(priority_queue *node, px_pq_comp comp, int capacity);
+int px_pq_insert(priority_queue *pq, void* item);
 
 #endif //HIGH_PERFORMANCE_SERVER_PX_PRIORITY_QUEUE_H

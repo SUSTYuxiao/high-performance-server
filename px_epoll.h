@@ -6,6 +6,7 @@
 #define HIGH_PERFORMANCE_SERVER_PX_EPOLL_H
 
 #include "px_request.h"
+#include "px_thread_pool.h"
 
 #define MAX_EVENTS 1024;
 #define EPOLL_SET                       \
@@ -23,6 +24,7 @@ int px_epoll_init(int flag);
 int px_epoll_add(int epollFd, int listenFd, httpRequest *request, int events);
 int px_epoll_mod(int epollFd, int listenFd, httpRequest *request, int events);
 int px_epoll_del(int epollFd, int listenFd, httpRequest *request, int events);
+void work(int epollFd, int listenFd, struct epoll_event* events, int eventsNum, char *path, threadpool *threadPoolID);
 
 
 #endif //HIGH_PERFORMANCE_SERVER_PX_EPOLL_H

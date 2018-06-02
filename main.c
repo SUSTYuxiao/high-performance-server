@@ -38,16 +38,15 @@ int main(int argc, char* argv[])
     //工作
     while (1)
     {
-        int time;
-        // time = fuc() 等待时间 TODO
+        int timeOverNow = px_timeOverNow();
 
         int eventsNum = epoll_wait(epollFd, event, MAX_EVENTS, -1);
 
-        //超时请求
-        //TODO
+        //删除已超时的
+        px_out_of_time();
 
         //遍历event数组
-        //handle_events(epollFd, listenFd, event, eventsNum, argv[1], threadPoolID);
+        work(epollFd, listenFd, event, eventsNum, argv[1], threadPoolID);
     }
 
     return 0;
