@@ -41,7 +41,7 @@ void* worker(void* p)
     pthread_exit(NULL);
 }
 
-threadpool* threadpool_init(int threadNum)
+threadpool* px_threadpool_init(int threadNum)
 {
     //分配线程池空间
     threadpool *pool;
@@ -73,7 +73,7 @@ threadpool* threadpool_init(int threadNum)
     return pool;
 }
 
-int threadpool_add(threadpool *pool, void (*func)(void *), void* arg)
+int px_threadpool_add(threadpool *pool, void (*func)(void *), void *arg)
 {
     if (!pool || !func)
         printError_exit("NULL(pool or func)");
@@ -107,7 +107,7 @@ int threadpool_add(threadpool *pool, void (*func)(void *), void* arg)
     return 0;
 }
 
-int threadpool_destroy(threadpool *pool)
+int px_threadpool_destroy(threadpool *pool)
 {
     if (pool == NULL)
         return 0;

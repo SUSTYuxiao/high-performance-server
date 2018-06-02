@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = "/Users/zpx/Nustore Files/我的坚果云/workNow/high perfor
 CMakeFiles/high_performance_server.dir/all:
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/depend
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5 "Built target high_performance_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target high_performance_server"
 .PHONY : CMakeFiles/high_performance_server.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/high_performance_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/high_performance_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles" 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/high_performance_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/high_performance_server.dir/rule

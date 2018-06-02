@@ -89,10 +89,28 @@
 		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_epoll.h">
 			<Option target="high_performance_server"/>
 		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_priority_queue.c">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_priority_queue.h">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_request.c">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_request.h">
+			<Option target="high_performance_server"/>
+		</Unit>
 		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_thread_pool.c">
 			<Option target="high_performance_server"/>
 		</Unit>
 		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_thread_pool.h">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_timer.c">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_timer.h">
 			<Option target="high_performance_server"/>
 		</Unit>
 		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_tool.c">

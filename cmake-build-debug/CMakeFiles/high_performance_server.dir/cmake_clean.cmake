@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/high_performance_server.dir/px_tool.c.o"
   "CMakeFiles/high_performance_server.dir/px_thread_pool.c.o"
   "CMakeFiles/high_performance_server.dir/px_epoll.c.o"
+  "CMakeFiles/high_performance_server.dir/px_request.c.o"
+  "CMakeFiles/high_performance_server.dir/px_timer.c.o"
+  "CMakeFiles/high_performance_server.dir/px_priority_queue.c.o"
   "high_performance_server.pdb"
   "high_performance_server"
 )

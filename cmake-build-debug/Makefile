@@ -177,6 +177,60 @@ px_epoll.c.s:
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_epoll.c.s
 .PHONY : px_epoll.c.s
 
+px_priority_queue.o: px_priority_queue.c.o
+
+.PHONY : px_priority_queue.o
+
+# target to build an object file
+px_priority_queue.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_priority_queue.c.o
+.PHONY : px_priority_queue.c.o
+
+px_priority_queue.i: px_priority_queue.c.i
+
+.PHONY : px_priority_queue.i
+
+# target to preprocess a source file
+px_priority_queue.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_priority_queue.c.i
+.PHONY : px_priority_queue.c.i
+
+px_priority_queue.s: px_priority_queue.c.s
+
+.PHONY : px_priority_queue.s
+
+# target to generate assembly for a file
+px_priority_queue.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_priority_queue.c.s
+.PHONY : px_priority_queue.c.s
+
+px_request.o: px_request.c.o
+
+.PHONY : px_request.o
+
+# target to build an object file
+px_request.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_request.c.o
+.PHONY : px_request.c.o
+
+px_request.i: px_request.c.i
+
+.PHONY : px_request.i
+
+# target to preprocess a source file
+px_request.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_request.c.i
+.PHONY : px_request.c.i
+
+px_request.s: px_request.c.s
+
+.PHONY : px_request.s
+
+# target to generate assembly for a file
+px_request.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_request.c.s
+.PHONY : px_request.c.s
+
 px_thread_pool.o: px_thread_pool.c.o
 
 .PHONY : px_thread_pool.o
@@ -203,6 +257,33 @@ px_thread_pool.s: px_thread_pool.c.s
 px_thread_pool.c.s:
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_thread_pool.c.s
 .PHONY : px_thread_pool.c.s
+
+px_timer.o: px_timer.c.o
+
+.PHONY : px_timer.o
+
+# target to build an object file
+px_timer.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_timer.c.o
+.PHONY : px_timer.c.o
+
+px_timer.i: px_timer.c.i
+
+.PHONY : px_timer.i
+
+# target to preprocess a source file
+px_timer.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_timer.c.i
+.PHONY : px_timer.c.i
+
+px_timer.s: px_timer.c.s
+
+.PHONY : px_timer.s
+
+# target to generate assembly for a file
+px_timer.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/px_timer.c.s
+.PHONY : px_timer.c.s
 
 px_tool.o: px_tool.c.o
 
@@ -246,9 +327,18 @@ help:
 	@echo "... px_epoll.o"
 	@echo "... px_epoll.i"
 	@echo "... px_epoll.s"
+	@echo "... px_priority_queue.o"
+	@echo "... px_priority_queue.i"
+	@echo "... px_priority_queue.s"
+	@echo "... px_request.o"
+	@echo "... px_request.i"
+	@echo "... px_request.s"
 	@echo "... px_thread_pool.o"
 	@echo "... px_thread_pool.i"
 	@echo "... px_thread_pool.s"
+	@echo "... px_timer.o"
+	@echo "... px_timer.i"
+	@echo "... px_timer.s"
 	@echo "... px_tool.o"
 	@echo "... px_tool.i"
 	@echo "... px_tool.s"

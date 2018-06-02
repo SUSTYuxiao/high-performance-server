@@ -24,8 +24,8 @@ typedef struct threadpool{
     int quit;                // 等待销毁
 }threadpool;
 
-threadpool *threadpool_init(int threadNum);
-int threadpool_add(threadpool *pool, void (*func)(void *), void* arg);
-int threadpool_destroy(threadpool *pool);
+threadpool* px_threadpool_init(int threadNum);
+int px_threadpool_add(threadpool *pool, void (*func)(void *), void *arg);
+int px_threadpool_destroy(threadpool *pool);
 
 #endif //HIGH_PERFORMANCE_SERVER_THREAD_POOL_H

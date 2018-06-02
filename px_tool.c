@@ -22,7 +22,7 @@ void printError_exit(char *c)
     exit(-1);
 }
 
-int init_socket(int portNum)
+int px_init_socket(int portNum)
 {
     //判断端口号合法性
     if( portNum < 1025 || portNum > 65535)

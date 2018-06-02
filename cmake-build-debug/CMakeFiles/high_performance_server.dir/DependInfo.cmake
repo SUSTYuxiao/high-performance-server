@@ -6,7 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/main.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/main.c.o"
   "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_epoll.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_epoll.c.o"
+  "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_priority_queue.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_priority_queue.c.o"
+  "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_request.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_request.c.o"
   "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_thread_pool.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_thread_pool.c.o"
+  "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_timer.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_timer.c.o"
   "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/px_tool.c" "/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/cmake-build-debug/CMakeFiles/high_performance_server.dir/px_tool.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

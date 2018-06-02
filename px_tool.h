@@ -12,6 +12,6 @@
 
 int get_CPU_core_num();
 void printError_exit(char *c);
-int init_socket(int portNum);
+int px_init_socket(int portNum);
 
 #endif //HIGH_PERFORMANCE_SERVER_TOOL_H
