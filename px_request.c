@@ -6,7 +6,7 @@
 #include <zconf.h>
 #include "px_request.h"
 
-void px_http_init(httpRequest *request, int epollFd, int listenFd, char *path)
+void px_request_init(httpRequest *request, int epollFd, int listenFd, char *path)
 {
     request->fd = listenFd;
     request->epollFd = epollFd;
@@ -18,7 +18,7 @@ void px_http_init(httpRequest *request, int epollFd, int listenFd, char *path)
     //INIT_LIST_HEAD(&(request->list));
 }
 
-int px_http_close(httpRequest *request){
+int px_request_close(httpRequest *request){
     close(request->fd);
     free(request);
     return 0;

@@ -123,6 +123,33 @@ high_performance_server/fast:
 	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/build
 .PHONY : high_performance_server/fast
 
+http.o: http.c.o
+
+.PHONY : http.o
+
+# target to build an object file
+http.c.o:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/http.c.o
+.PHONY : http.c.o
+
+http.i: http.c.i
+
+.PHONY : http.i
+
+# target to preprocess a source file
+http.c.i:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/http.c.i
+.PHONY : http.c.i
+
+http.s: http.c.s
+
+.PHONY : http.s
+
+# target to generate assembly for a file
+http.c.s:
+	$(MAKE) -f CMakeFiles/high_performance_server.dir/build.make CMakeFiles/high_performance_server.dir/http.c.s
+.PHONY : http.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... high_performance_server"
+	@echo "... http.o"
+	@echo "... http.i"
+	@echo "... http.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

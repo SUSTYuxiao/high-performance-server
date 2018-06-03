@@ -99,3 +99,8 @@ void px_time_add(httpRequest *request, int timeOut, out_time_handler handler)
 
     px_pq_insert(&timerPq, timer_node);
 }
+
+void px_time_del(httpRequest *request)
+{
+    request->time_node->readyToDeleted = 1;
+}

@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
     //初始化httpRequest结构
     httpRequest *request = (httpRequest *) malloc(sizeof(httpRequest));
-    px_http_init(request, epollFd, listenFd, argv[1]);
+    px_request_init(request, epollFd, listenFd, argv[1]);
 
     //注册lstenFd到epoll
     px_epoll_add(epollFd, listenFd, request, (EPOLLIN | EPOLLET));

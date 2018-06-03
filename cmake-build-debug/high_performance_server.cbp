@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/http.c">
+			<Option target="high_performance_server"/>
+		</Unit>
+		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/http.h">
+			<Option target="high_performance_server"/>
+		</Unit>
 		<Unit filename="/Users/zpx/Nustore Files/我的坚果云/workNow/high performance server/main.c">
 			<Option target="high_performance_server"/>
 		</Unit>

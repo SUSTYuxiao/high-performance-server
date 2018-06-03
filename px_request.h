@@ -17,9 +17,10 @@ typedef struct httpRequest
     int pos;
     int last;
     int state;
+    char *buff;
 }httpRequest;
 
-void px_http_init(httpRequest *request, int epollFd, int listenFd, char *path);
-int px_http_close(httpRequest *request);
+void px_request_init(httpRequest *request, int epollFd, int listenFd, char *path);
+int px_request_close(httpRequest *request);
 
 #endif //HIGH_PERFORMANCE_SERVER_PX_REQUEST_H

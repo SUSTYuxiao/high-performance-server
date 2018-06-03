@@ -22,6 +22,7 @@ int px_time_init();
 int px_timeOverNow();
 void px_out_of_time();
 void px_time_add(httpRequest *request, int timeOut, out_time_handler handler);
+void px_time_del(httpRequest *request);
 
 
 #endif //HIGH_PERFORMANCE_SERVER_PX_TIMER_H

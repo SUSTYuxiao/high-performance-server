@@ -78,10 +78,10 @@ void px_accept(int listenFd, int epollFd, char *path)
         perror("accept");
 
     httpRequest* request = (httpRequest*)malloc(sizeof(httpRequest));
-    px_http_init(request, clientFd, epollFd, path);
+    px_request_init(request, clientFd, epollFd, path);
 
     //EPOLLONESHOT表示再次监听此事件前，需要先重新加入fd到epoll
     px_epoll_add(epollFd, clientFd, request, (EPOLLIN | EPOLLET | EPOLLONESHOT));
 
-    px_time_add(request, TIME_OUT_DEFAULT, px_http_close);
+    px_time_add(request, TIME_OUT_DEFAULT, px_request_close);
 }

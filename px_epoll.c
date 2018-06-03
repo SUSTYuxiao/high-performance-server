@@ -6,9 +6,9 @@
 #include "px_epoll.h"
 #include "px_tool.h"
 #include "px_thread_pool.h"
+#include "http.h"
 
 struct  epoll_event *event;
-
 
 int px_epoll_init(int flag)
 {
@@ -52,7 +52,7 @@ void work(int epollFd, int listenFd, struct epoll_event* events, int eventsNum, 
             }
 
             //加入到线程池//TODO
-            px_threadpool_add(threadPoolID, do_request, events[i].data.ptr);
+            px_threadpool_add(threadPoolID, do_request(request), events[i].data.ptr);
             // do_request(events[i].data.ptr);
         }
     }
